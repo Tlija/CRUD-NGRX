@@ -22,6 +22,12 @@ const routes: Routes = [
       {path:'edit/:id',component:EditproductComponent}
     ]
   },
+  {
+    path: 'auth',
+    loadChildren:()=> import('../app/auth/auth.module').then((m)=>m.AuthModule),
+  },
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
